@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:paddingBottom="8dp" />
+
+        <!-- 权限状态 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="权限状态"
+            android:textStyle="bold"
+            android:paddingTop="4dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvAccessStatus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/access_off" />
+
+            <Button
+                android:id="@+id/btnOpenAccessibility"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/open_accessibility"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvOverlayStatus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/overlay_off" />
+
+            <Button
+                android:id="@+id/btnOverlayPermission"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/open_overlay_permission"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#DDDDDD"
+            android:layout_marginVertical="12dp" />
+
+        <!-- 全局参数 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="全局设置"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="循环次数(0=无限)" />
+            <EditText
+                android:id="@+id/etLoopCount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="number"
+                android:text="0" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="间隔抖动%" />
+            <EditText
+                android:id="@+id/etJitterPercent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="number"
+                android:text="0" />
+        </LinearLayout>
+
+        <!-- 点位列表 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="点位列表"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnAddPoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add_point"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerPoints"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="200dp"
+            android:nestedScrollingEnabled="false" />
+
+        <!-- 方案保存 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <EditText
+                android:id="@+id/etProfileName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/profile_name_hint" />
+
+            <Button
+                android:id="@+id/btnSaveProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/save_profile"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <Spinner
+            android:id="@+id/spinnerProfiles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- 控制按钮 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="12dp">
+
+            <Button
+                android:id="@+id/btnStart"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/start"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnShowOverlay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/show_overlay"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="8dp"
+            android:text="@string/hint_ready"
+            android:textColor="#666666" />
+
+    </LinearLayout>
+</ScrollView>
