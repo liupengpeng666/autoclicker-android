@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/controlRoot"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_overlay"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:text="待机"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        android:gravity="center"
+        android:paddingBottom="6dp" />
+
+    <Button
+        android:id="@+id/btnStartStop"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:text="@string/start"
+        android:textSize="13sp" />
+
+    <Button
+        android:id="@+id/btnPick"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:text="@string/pick_point"
+        android:textSize="13sp" />
+
+    <Button
+        android:id="@+id/btnClose"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:text="@string/close_overlay"
+        android:textSize="13sp" />
+</LinearLayout>
