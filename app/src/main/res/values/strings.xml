@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">连点器</string>
+    <string name="accessibility_label">连点器服务</string>
+    <string name="accessibility_description">允许连点器注入点击与滑动手势，用于自动化重复操作。</string>
+
+    <string name="access_on">无障碍服务：已开启 ✓</string>
+    <string name="access_off">无障碍服务：未开启 ✗</string>
+    <string name="overlay_on">悬浮窗权限：已授予 ✓</string>
+    <string name="overlay_off">悬浮窗权限：未授予 ✗</string>
+
+    <string name="open_accessibility">去开启</string>
+    <string name="open_overlay_permission">去授权</string>
+    <string name="add_point">添加点位</string>
+    <string name="pick_point">取点</string>
+    <string name="picking_on">取点中</string>
+    <string name="start">开始</string>
+    <string name="stop">停止</string>
+    <string name="show_overlay">悬浮窗</string>
+    <string name="close_overlay">关闭</string>
+    <string name="profile_name_hint">方案名称</string>
+    <string name="save_profile">保存方案</string>
+    <string name="select_profile">选择方案…</string>
+    <string name="hint_ready">就绪，添加点位后点击开始</string>
+    <string name="tag_text_watcher" translatable="false">text_watcher_tag</string>
+
+    <string-array name="point_types">
+        <item>单击</item>
+        <item>滑动</item>
+    </string-array>
+</resources>
